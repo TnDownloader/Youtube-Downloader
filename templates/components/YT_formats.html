@@ -1,0 +1,28 @@
+<div class="container text-center mt-5">
+  <h2>{{title}}</h2>
+  <div class="thumbnail-formats">
+    <img
+      src="{{thumbnail}}"
+      alt="Thumbnail"
+      class="thumbnail"
+    />
+    <div style="width: 690px;">
+      <a href="{{thumbnail}}" target="_blank" rel="noreferrer">
+        <button class="download-format-button-Thumbnail"><span class="material-symbols-outlined"> imagesmode </span><br />
+          Download Thumbnail
+        </button>
+      </a>
+      <a href="{{Audio}}" target="_blank" rel="noreferrer">
+        <button class="download-format-button-Audio"><span class="material-symbols-outlined"> headphones </span><br />
+          Download Audio Mp3
+        </button>
+      </a>
+      {% for format in formats %}
+      <a href="{{format.url}}" target="_blank" rel="noreferrer">
+        <button class="download-format-button"><span class="material-symbols-outlined"> download </span><br />{{format.name}} Mp4 Quality</button>
+      </a>
+      {% endfor %}
+    </div>
+    
+  </div>
+</div>
